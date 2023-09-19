@@ -4,6 +4,15 @@
   margin: 0;
   scroll-behavior: smooth;
 }
+&::-webkit-scrollbar:horizontal {
+  height: 0;
+  width: 0;
+  display: none;
+}
+
+&::-webkit-scrollbar-thumb:horizontal {
+  display: none;
+}
 
 .nav {
   background: #fff;
@@ -59,17 +68,18 @@
   margin: 0 auto;
   max-width: 1000px;
   width: 90%;
+
 }
 
 .main_name {
   display: flex;
   flex-direction: column;
-  margin-top: 8em;
-  margin-right: 19em;
+  padding-top: 8em;
   text-align: left;
-  margin-left: 12em;
-  margin-right: 12em;
+  padding-left: 12em;
+  padding-right: 12em;
   line-height: 1.7;
+  margin-bottom: -15em;
 }
 
 h1 {
@@ -86,7 +96,7 @@ h1 {
   background-color: transparent;
   padding: 9px 20px;
   border: 1.8px solid black;
-  margin-top: 2.5rem;
+  margin-top: 2.2rem;
   cursor: pointer;
   position: relative;
   transition: 0.3s;
@@ -110,11 +120,11 @@ h1 {
   background: black;
   transition: all 0.4s;
   border-radius: 2px;
-  z-index: 1; /* Place the background behind the button text */
+  z-index: 1;
 }
 
 .resume_btn:hover::after {
-  width: 100%; /* Slide the background in from the left on hover */
+  width: 100%;
 }
 
 .resume_btn:hover a {
@@ -127,12 +137,49 @@ h1 {
 
 .img-container {
   position: relative;
-  top: -6em;
+  top: -6.5em;
   transform: translateY(-50%);
-  margin-left: 36em;
+  margin-left: 35em;
 }
 
 .img-container img {
-  max-width: 100%; 
+  max-width: 125%; 
   display: block;
+}
+
+.about {
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  text-align: center; 
+  margin: 0 auto;
+}
+
+.about_title {
+  font-size: 2.3rem;
+  padding-bottom: 50px;
+  padding-top: 20px;
+}
+
+.about_content {
+  display: flex;
+  flex-direction: row; 
+  align-items: center; 
+  justify-content: center;
+  text-align: left;
+  padding: 0 230px;
+}
+
+.about_text {
+  font-size: 1.3rem;
+  line-height: 1.5;
+}
+
+.about_img {
+  text-align: right;
+}
+
+.about_img img {
+  max-width: 80%;
+  height: auto;
 }
